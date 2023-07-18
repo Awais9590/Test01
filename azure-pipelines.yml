@@ -19,8 +19,8 @@ steps:
       backendAzureRmStorageAccountName: 'testsorage959'
       backendAzureRmContainerName: 'testdev'
       backendAzureRmKey: 'testdev.state'
- - task: TerraformTaskV4@4
-   inputs:
+  - task: TerraformTaskV4@4
+    inputs:
       provider: 'azurerm'
       command: 'apply'
       environmentServiceNameAzureRM: 'DevTest'
