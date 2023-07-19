@@ -10,17 +10,20 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-  - task: TerraformTaskV4@4
-    inputs:
-      provider: 'azurerm'
-      command: 'init'
-      backendServiceArm: 'DevTest'
-      backendAzureRmResourceGroupName: 'TESTDEV'
-      backendAzureRmStorageAccountName: 'testsorage959'
-      backendAzureRmContainerName: 'testdev'
-      backendAzureRmKey: 'testdev.state'
-  - task: TerraformTaskV4@4
-    inputs:
-      provider: 'azurerm'
-      command: 'apply'
-      environmentServiceNameAzureRM: 'DevTest'
+      - task: TerraformTaskV4@4
+        inputs:
+          provider: 'azurerm'
+          command: 'init'
+          backendServiceArm: 'Test02'
+          backendAzureRmResourceGroupName: 'TESTDEV'
+          backendAzureRmStorageAccountName: 'testsorage959'
+          backendAzureRmContainerName: 'testdev'
+          backendAzureRmKey: 'testdev.state'
+      - task: TerraformTaskV4@4
+        inputs:
+           provider: 'azurerm'
+           command: 'validate'
+      - task: TerraformTaskV4@4
+        inputs:
+            provider: 'azurerm'
+            command: 'apply'
