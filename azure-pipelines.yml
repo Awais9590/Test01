@@ -23,3 +23,12 @@ steps:
     backendAzureRmStorageAccountName: 'testsorage959'
     backendAzureRmContainerName: 'testdev'
     backendAzureRmKey: 'Gn7+wkKMVYiDjfkm+WiJWgZLwvTv+3neKEiQVQo9huwGfbkqzdC/YSBF5lBEJ4SGyk8CL0Yloe7X+AStMIqYdg=='
+- task: TerraformTaskV4@4
+  inputs:
+    provider: 'azurerm'
+    command: 'validate'
+- task: TerraformTaskV4@4
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
+    environmentServiceNameAzureRM: 'Test02'
