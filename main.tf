@@ -11,6 +11,7 @@ terraform {
 provider "azurerm" {
   features {}
   subscription_id = "e2281e72-9c41-4ddd-9d57-fd5adc915686"
+  tenant_id = "e2281e72-9c41-4ddd-9d57-fd5adc915686"
 }
 resource "azurerm_resource_group" "sqlvm" {
   name     = "sqlvm"
