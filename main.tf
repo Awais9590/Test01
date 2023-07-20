@@ -13,7 +13,8 @@ provider "azurerm" {
      subscription_id = "e2281e72-9c41-4ddd-9d57-fd5adc915686"
      client_id       = "f548d2b4-7d58-47a5-91b2-97c0d3d1db15"
      client_secret   = ""
-   }  tenant_id       = "f548d2b4-7d58-47a5-91b2-97c0d3d1db15"
+     tenant_id       = "f548d2b4-7d58-47a5-91b2-97c0d3d1db15"
+  }
 }
 resource "azurerm_resource_group" "sqlvm" {
   name     = "sqlvm"
