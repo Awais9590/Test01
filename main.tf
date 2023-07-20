@@ -7,11 +7,22 @@ terraform {
   }
 }
 
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "TESTDEV"
+    storage_account_name = "testsorage959"
+    container_name       = "testdev"
+    key                  = "Gn7+wkKMVYiDjfkm+WiJWgZLwvTv+3neKEiQVQo9huwGfbkqzdC/YSBF5lBEJ4SGyk8CL0Yloe7X+AStMIqYdg=="
+    use_msi              = true
+    subscription_id = "e2281e72-9c41-4ddd-9d57-fd5adc915686"
+    tenant_id = "e2281e72-9c41-4ddd-9d57-fd5adc915686"
+  }
+}
+
+
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
-  subscription_id = "e2281e72-9c41-4ddd-9d57-fd5adc915686"
-  tenant_id = "e2281e72-9c41-4ddd-9d57-fd5adc915686"
 }
 resource "azurerm_resource_group" "sqlvm" {
   name     = "sqlvm"
