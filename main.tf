@@ -15,7 +15,7 @@ terraform {
     key                  = "Gn7+wkKMVYiDjfkm+WiJWgZLwvTv+3neKEiQVQo9huwGfbkqzdC/YSBF5lBEJ4SGyk8CL0Yloe7X+AStMIqYdg=="
     use_msi              = true
     subscription_id = "e2281e72-9c41-4ddd-9d57-fd5adc915686"
-    tenantId = "75668f36-65d3-4d90-a990-4bb8ec16728f
+    tenantId = "75668f36-65d3-4d90-a990-4bb8ec16728f"
   }
 }
 
